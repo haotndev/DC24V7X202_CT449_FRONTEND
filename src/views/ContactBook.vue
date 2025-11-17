@@ -95,7 +95,6 @@ export default {
     async retrieveContacts() {
       try {
         this.contacts = await ContactService.getAll();
-        console.log(this.contacts);
       } catch (error) {
         console.log(error);
       }
@@ -114,9 +113,9 @@ export default {
         }
       }
     },
-  },
-  goToAddContact() {
-    this.$router.push({ name: "contact.add" });
+    goToAddContact() {
+      this.$router.push({ name: "contact.add" });
+    },
   },
   mounted() {
     this.refreshList();
